@@ -98,10 +98,25 @@ public class StringProcessing {
 	}
 	
 	public void DrawGraph(String str1, String str2) {
-		System.out.println("  S U B L I M E");
-		System.out.println("L * * * 3 * * *");
-		System.out.println("I * * * * 4 * *");
-		System.out.println("M * * * * * 5 *");
-		System.out.println("M * * * * * * 6");
+		
+		char[] array = str1.toCharArray();
+		char[] array2 = str2.toCharArray();
+		String temp = "   ";
+		for(char letter : array) {
+			temp += letter;
+			temp += " ";
+		}
+		
+		
+		System.out.println(temp);
+		for(int i = 0; i < array2.length; i++) {
+			System.out.print(array2[i] + " "); 
+			for(char letter : array)
+				System.out.print(" *"); 
+			
+			System.out.println(); 
+		}
+		
+	
 	}
 }

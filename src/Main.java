@@ -12,6 +12,6 @@ public class Main {
 		
 		st.FindAndReplace("I am going to london", "london", "Manchester");
 		System.out.println();
-		st.DrawGraph("sublime", "lime");
+		st.DrawGraph("SUBLIME", "LIME");
 	}
 }
