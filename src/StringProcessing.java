@@ -55,41 +55,46 @@ public class StringProcessing {
 		int index = 0;
 		int indexEnd = 0;
 		boolean match = false;
+		int ltemp = 0;
 		int temp = 0;
 		
 		for(int i = 0; i < msgArray.length; i++) {
 			for(int j = temp; j < findArray.length; j++) {
 				if(msgArray[i] == (findArray[j])) {
 					if(counter == 0)
-						index = j;
+						index = i;
 					match = true;
 					
-					System.out.print(msgArray[i]); System.out.print(findArray[j]); System.out.println(counter); 
+					//System.out.print(msgArray[i]); System.out.print(findArray[j]); System.out.println(counter); 
 					counter++;
 					
 					
 				} else {
 					
-					System.out.print(msgArray[i]); System.out.print(findArray[j]);  System.out.println(counter);
+					//System.out.print(msgArray[i]); System.out.print(findArray[j]);  System.out.println(counter);
 					counter = 0;
 					match = false;
+					temp = 0;
 				}
 				
 				
 				
 				if(match) {
-					j = temp;
+					
+					temp++;;
 					break;
 				}
 			}
 			
 			if(counter == findArray.length) {
 				System.out.println("Match found at: " + index);
+				String replacedStr = msg.replaceAll(find, replace);
+				System.out.println(replacedStr);
 				break;
 			}
 		}
 		
-		System.out.println(counter);
+		
 	}
 
 }
