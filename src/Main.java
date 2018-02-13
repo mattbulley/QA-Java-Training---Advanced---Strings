@@ -11,5 +11,7 @@ public class Main {
 		System.out.println("'" + str + "'" + " has " + (wordcount-2) + " words in it.");
 		
 		st.FindAndReplace("I am going to london", "london", "Manchester");
+		System.out.println();
+		st.DrawGraph("sublime", "lime");
 	}
 }

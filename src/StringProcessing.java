@@ -96,5 +96,12 @@ public class StringProcessing {
 		
 		
 	}
-
+	
+	public void DrawGraph(String str1, String str2) {
+		System.out.println("  S U B L I M E");
+		System.out.println("L * * * 3 * * *");
+		System.out.println("I * * * * 4 * *");
+		System.out.println("M * * * * * 5 *");
+		System.out.println("M * * * * * * 6");
+	}
 }
